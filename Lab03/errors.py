@@ -1,4 +1,5 @@
 def zero_divide():
+    """will create a divide by zero error"""
     zero = 0
     number = int(input("What number would you like to divide ny zero?: "))
     div_zero = number/zero
@@ -6,13 +7,15 @@ def zero_divide():
 
 
 def index_error():
-    list_error01 = [0,1,2]
+    """will output multiple index error messages"""
+    list_error01 = [0, 1, 2]
     list_error01[3]
-    list_error02 = [7,16,5,8,7]
-    print(list_error02[5])
+    list_error02 = ["cat", "dog", "fish"]
+    print(list_error02[4])
 
 
 def type_error():
+    """will output multiple type error messages"""
     len(42)
     error = "dog" + 2
 

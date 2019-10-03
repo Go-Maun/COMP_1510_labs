@@ -1,6 +1,72 @@
 from unittest import TestCase
 
 from Lab04.roman_numbers import convert_to_roman_numeral
+from Lab04.roman_numbers import thousands
+from Lab04.roman_numbers import hundreds
+from Lab04.roman_numbers import tens
+from Lab04.roman_numbers import ones
+
+
+class TestThousands(TestCase):
+    def test_thousands_one(self):
+        self.assertEqual("M", thousands(1000, ""))
+
+    def test_thousands_five(self):
+        self.assertEqual("MMMMM", thousands(5000, ""))
+
+    def test_thousands_nine(self):
+        self.assertEqual("MMMMMMMMM", thousands(9000, ""))
+
+
+class TestHundreds(TestCase):
+    def test_hundreds_one(self):
+        self.assertEqual("C", hundreds(100, ""))
+
+    def test_hundreds_four(self):
+        self.assertEqual("CD", hundreds(400, ""))
+
+    def test_hundreds_five(self):
+        self.assertEqual("D", hundreds(500, ""))
+
+    def test_hundreds_six(self):
+        self.assertEqual("DC", hundreds(600, ""))
+
+    def test_hundreds_nine(self):
+        self.assertEqual("CM", hundreds(900, ""))
+
+
+class TestTens(TestCase):
+    def test_tens_one(self):
+        self.assertEqual("X", tens(10, ""))
+
+    def test_tens_four(self):
+        self.assertEqual("XL", tens(40, ""))
+
+    def test_tens_five(self):
+        self.assertEqual("L", tens(50, ""))
+
+    def test_tens_six(self):
+        self.assertEqual("LX", tens(60, ""))
+
+    def test_tens_nine(self):
+        self.assertEqual("XC", tens(90, ""))
+
+
+class TestOnes(TestCase):
+    def test_ones_one(self):
+        self.assertEqual("I", ones(1, ""))
+
+    def test_ones_four(self):
+        self.assertEqual("IV", ones(4, ""))
+
+    def test_ones_five(self):
+        self.assertEqual("V", ones(5, ""))
+
+    def test_ones_six(self):
+        self.assertEqual("VI", ones(6, ""))
+
+    def test_ones_nine(self):
+        self.assertEqual("IX", ones(9, ""))
 
 
 class TestConvert_to_roman_numeral(TestCase):

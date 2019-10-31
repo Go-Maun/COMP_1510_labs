@@ -36,7 +36,7 @@ def cutoff(integer_list, integer_multiple):
     3
     """
     count = 0
-    for number in range(len(integer_list)):
+    for number in integer_list:
         if number % integer_multiple == 0:
             count += 1
     return count
@@ -87,7 +87,7 @@ def multiples_of_3(upper_bound):
     """ adds all multiples of 3 under the upper bound
 
     :param upper_bound: the requested upper bound
-    :precondition the upper bound is an int:
+    :precondition the upper bound is a positive int above 1:
     :postcondition adds all multiples of 3:
     :return: the sum of all multiples of 3
 

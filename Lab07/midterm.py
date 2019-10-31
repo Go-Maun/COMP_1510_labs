@@ -50,16 +50,9 @@ def prepender(string_list, new_string):  # function should modify the list witho
     :precondition the list contains only strings:
     :postcondition the list gets modified:
     :return: the changed list
-
-    >>> prepender(['got time for that'], 'aint nobody ')
-    ['aint nobody got time for that']
-
-    >>> prepender(['yo kids', 'yo wife'], 'hide ')
-    ['hide yo kids', 'hide yo wife']
     """
     for value in range(len(string_list)):
         string_list[value] = new_string + string_list[value]
-    print(string_list)  # dont know if this should be here
 
 
 def name_list():

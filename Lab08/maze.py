@@ -189,6 +189,7 @@ def game():
         print_room(5, board, character_dict)
         player_input = get_input()
         character_dict = test_input(player_input, 5, 5, character_dict)
+    print_room(5, board, character_dict)
     print("Congratulations, You escaped the maze!")
 
 

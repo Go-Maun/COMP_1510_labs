@@ -34,7 +34,7 @@ def main():
     answer = int(input("please choose a non inclusive positive upper bound: "))
     try:
         print(eratosthenes(answer))
-    except:
+    except ValueError:
         print("That number is invalid")
 
 
